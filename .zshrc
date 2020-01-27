@@ -99,4 +99,5 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # Python from source code
 export PATH=$PATH:/home/andmed/.python/bin
+export PATH=$PATH:/snap/bin
 alias python3='python3.8'

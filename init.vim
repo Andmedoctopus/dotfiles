@@ -18,6 +18,7 @@ Plug 'davidhalter/jedi-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'neomake/neomake' 
 Plug 'tmhedberg/SimpylFold'
+Plug 'mrk21/yaml-vim'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -31,23 +32,11 @@ set background=dark
 " theme for status bar
 let g:airline_theme='tomorrow'
 
-" netrw configuration
-"" Per default, netrw leaves unmodified buffers open. This autocommand
-"" deletes netrw's buffer once it's hidden (using ':q', for example)
-"autocmd FileType netrw setl bufhidden=delete
-
-"let g:netrw_liststyle = 3
-"let g:netrw_banner = 0
-"let g:netrw_browse_split = 4
-"let g:netrw_altv = 1
-"let g:netrw_winsize = 15
-"augroup ProjectDrawer
-  "autocmd!
-  "autocmd VimEnter * :Vexplore
-"augroup END
 
 "open the nerdtree window when opening up Nvim
 autocmd VimEnter * NERDTree | wincmd p
+nnoremap <silent> <C-k><C-B> :NERDTreeToggle<CR>
+nmap <leader>nf :NERDTreeFind<CR>
 
 " moving between nvim and netwr
 map <C-j> <C-W>j
