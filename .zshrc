@@ -70,7 +70,7 @@ ZSH_THEME="gallois"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting docker-compose docker)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting docker-compose docker aws)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -123,3 +123,5 @@ complete -o nospace -C /usr/bin/vault vault
 # for pip
 export PATH=$PATH:/home/andmed/.local/bin
 
+alias reset_light="light -S 80"
+alias rl='reset_light'
