@@ -125,3 +125,6 @@ export PATH=$PATH:/home/andmed/.local/bin
 
 alias reset_light="light -S 80"
 alias rl='reset_light'
+alias update_spacemacs="cd ~/.emacs.d && git pull && cd -"
+alias aws_workstation="ssh -i .ssh/aws-ec2-key-ed25519.pem ec2-user@18.157.187.239"
+alias full_update="update_spacemacs && omz update && sudo dnf update -y"
