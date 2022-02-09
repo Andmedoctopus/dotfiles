@@ -14,11 +14,13 @@
         - snapd
         - git
 
-    - name: Install spacemacs
+    - name: Install emacs
       snap:
         name: emacs
         classic: yes
-      commmand: "git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d"
+
+    - name: Install spacemacs
+      command: "git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d"
 
     - name: Install snap packages
       snap:
