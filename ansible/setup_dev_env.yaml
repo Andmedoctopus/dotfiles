@@ -1,8 +1,8 @@
 ---
 - hosts: localhost
   vars:
-    install_omz: yes
-    install_spacemacs: yes
+    install_omz: no
+    install_spacemacs: no
     install_i3: no
 
   tasks:
