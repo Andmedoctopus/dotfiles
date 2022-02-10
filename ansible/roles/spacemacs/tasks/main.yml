@@ -1,2 +1,23 @@
 ---
 # tasks file for spacemacs
+- block:
+    with_items:
+      - snaps
+      - silversearcher-ag
+    apt:
+      name: "{{ item }}"
+  become: yes
+
+- name: Install emacs
+  snap:
+    name: emacs
+    classic: yes
+
+- name: Install spacemacs
+  git:
+    repo: https://github.com/syl20bnr/spacemacs
+    dest: "~/.emacs.d"
+
+- name: Copy config
+  copy:
+    dest: "~"
