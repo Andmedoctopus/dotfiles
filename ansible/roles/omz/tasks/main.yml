@@ -3,9 +3,15 @@
 
 - block:
   become: yes
-  - name: Install zsh
+  - name: Install zsh and curl
+    with_items:
+      - zsh
+      - curl
     apt:
-      name: zsh
+      name: {{ item }}
+
+- name: Install OMZ
+  command: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 - name: Copy config
   copy:
