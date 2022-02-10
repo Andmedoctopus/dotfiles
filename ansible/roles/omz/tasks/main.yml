@@ -16,7 +16,6 @@
 - name: Copy config
   copy:
     dest: "~"
-    src: ".zshrc"
 
 - name: Replace username in config
   command:
