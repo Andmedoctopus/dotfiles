@@ -12,6 +12,6 @@ git checkout ansible-dev
 
 read -p "Do you wish to install this program?" yn
 case $yn in
-    [Yy]* ) ansible-playbook $SETUP_FILE; break;;
+    [Yy]* ) ansible-playbook $SETUP_FILE --ask-become-pass; break;;
     * ) echo Visit $STORE_PATH/$SETUP_FILE to configure; exit;;
 esac

@@ -1,10 +1,11 @@
 ---
 # tasks file for omz
 
-
-- name: Install zsh
-  import_tasks: sudo_tasks.yml
-
+- block:
+  become: yes
+  - name: Install zsh
+    apt:
+      name: zsh
 
 - name: Copy config
   copy:
