@@ -1,17 +1,17 @@
 ---
 # tasks file for spacemacs
 - block:
+  - name: Install silversearcher for helm-ag
     with_items:
-      - snaps
       - silversearcher-ag
     apt:
       name: "{{ item }}"
+  - name: Install emacs
+    snap:
+      name: emacs
+      classic: yes
   become: yes
 
-- name: Install emacs
-  snap:
-    name: emacs
-    classic: yes
 
 - name: Install spacemacs
   git:
