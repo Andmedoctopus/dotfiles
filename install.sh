@@ -2,8 +2,8 @@
 
 sudo add-apt-repository --yes --update ppa:ansible/ansible
 sudo apt install -y ansible git
-$STORE_PATH = ~/.config/.dotfiles
-$SETUP_FILE = setup_dev_env.yaml
+STORE_PATH="~/.config/.dotfiles"
+SETUP_FILE="setup_dev_env.yaml"
 
 git pull https://github.com/Andmedoctopus/dotfiles $STORE_PATH
 cd $STORE_PATH
