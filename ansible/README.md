@@ -7,7 +7,7 @@ make connect-to-ubuntu
 
 # Installation
 ```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Andmedoctopus/dotfiles/ansible-dev/install.sh)"
+sh -c "$(wget https://raw.githubusercontent.com/Andmedoctopus/dotfiles/ansible-dev/install.sh -O -)"
 ```
 
 # Launch
