@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/andmed/.oh-my-zsh"
+export ZSH="/home/installtion_ozm_username/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -101,14 +101,8 @@ alias vim="vimx"
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias refresh_config="source ~/.zshrc"
-alias acpj="cd ~/Project/deps"
-alias acbk="cd ~/Project/deps/deps-backend"
-alias rdpj="cd ~/Project/redex-fontana"
-alias rdbk="cd ~/Project/redex-fontana/redex-backend"
 
 alias ip3="ipython3"
-
-alias curltime="~/curltime"
 
 #alias QT_QPA_PLATFORM="xcb flamesho"
 # non root docker
@@ -121,7 +115,7 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/vault vault
 
 # for pip
-export PATH=$PATH:/home/andmed/.local/bin
+export PATH=$PATH:/home/installtion_ozm_username/.local/bin
 
 alias reset_light="light -S 80"
 alias rl='reset_light'

@@ -1,0 +1,15 @@
+---
+# tasks file for omz
+
+- name: Install zsh
+  apt:
+    name: zsh
+
+- name: Copy config
+  copy:
+    dest: "~"
+    src: ".zshrc"
+
+- name: Replace username in config
+  command:
+    cmd: "sed -i 's/installtion_ozm_username/{{ ansible_user_id }}/g' ~/.zshrc"
