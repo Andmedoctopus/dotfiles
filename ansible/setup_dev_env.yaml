@@ -1,7 +1,18 @@
 ---
 - hosts: localhost
+  vars:
+    install_omz: yes
+    install_spacemacs: yes
+    install_i3: no
 
   tasks:
     - name: Install omz
       import_role:
         name: omz
+      when: install_omz
+
+    - name: Install spacemacs
+      import_role:
+        name: spacemacs
+      when: install_spacemacs
+
