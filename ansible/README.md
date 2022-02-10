@@ -7,8 +7,7 @@ make connect-to-ubuntu
 
 # Installation
 ```bash
-sudo add-apt-repository --yes --update ppa:ansible/ansible
-sudo apt install -y ansible git
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Andmedoctopus/dotfiles/ansible-dev/install.sh)"
 ```
 
 # Launch
