@@ -2,16 +2,16 @@
 # tasks file for omz
 
 - block:
-  become: yes
   - name: Install zsh and curl
     with_items:
       - zsh
       - curl
     apt:
-      name: {{ item }}
+      name: "{{ item }}"
+  become: yes
 
 - name: Install OMZ
-  command: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  shell: 'sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
 
 - name: Copy config
   copy:
@@ -21,3 +21,17 @@
 - name: Replace username in config
   command:
     cmd: "sed -i 's/installtion_ozm_username/{{ ansible_user_id }}/g' ~/.zshrc"
+
+- name: Install plugins
+  block:
+    - git:
+        repo: https://github.com/zsh-users/zsh-autosuggestions
+        dest: "~/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+    - git:
+        repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
+        dest: "~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+
+- block:
+    - name: Change default shell
+      command: "usermod --shell /bin/zsh {{ ansible_user_id }}"
+  become: yes
