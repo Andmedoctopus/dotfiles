@@ -8,5 +8,6 @@ git clone https://github.com/Andmedoctopus/dotfiles $STORE_PATH
 cd $STORE_PATH
 # to remove when merge to master
 git checkout ansible-dev
+cd ansible
 
 make install
