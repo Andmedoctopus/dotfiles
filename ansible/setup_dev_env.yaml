@@ -1,5 +1,5 @@
 ---
-- hosts: testserver
+- hosts: localhost
 
   tasks:
     - name: Install omz
