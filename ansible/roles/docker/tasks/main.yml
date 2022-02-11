@@ -23,6 +23,7 @@
       - docker-ce-cli
       - containerd.io
       - docker-ce-rootless-extras
+      - uidmap
     apt:
       name: "{{ item }}"
       update_cache: yes
