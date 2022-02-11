@@ -1,12 +1,12 @@
 ---
 - hosts: localhost
   vars:
-    install_omz: no
-    install_spacemacs: no
-    install_docker: no
+    install_omz: yes
+    install_spacemacs: yes
+    install_docker: yes
     install_i3: yes
-    install_work_tools: no
-    install_other_tools: no
+    install_work_tools: yes
+    install_other_tools: yes
 
   tasks:
     - name: Install omz
