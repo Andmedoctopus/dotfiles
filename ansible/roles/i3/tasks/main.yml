@@ -26,9 +26,9 @@
 - name: Copy config
   copy:
     src: config
-    dest: config_folder
+    dest: "{{ config_folder }}" 
 
 - name: Copy wallpaper
   copy:
     src: wallpaper.jpg
-    dest: config_folder
+    dest: "{{ config_folder }}"
