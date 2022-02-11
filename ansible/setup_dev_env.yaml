@@ -5,7 +5,7 @@
     install_spacemacs: no
     install_docker: yes
     install_i3: no
-    install_work_tools: no
+    install_work_tools: yes
     install_other_tools: yes
 
   tasks:
@@ -29,3 +29,7 @@
         name: other_tools
       when: install_other_tools
 
+    - name: Install work tools
+      import_role:
+        name: work_tools
+      when: install_work_tools

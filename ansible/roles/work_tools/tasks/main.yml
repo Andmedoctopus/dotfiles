@@ -1,0 +1,20 @@
+---
+# tasks file for work_tools
+
+- name: Add GPG key
+  command: curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+
+- block:
+  - name: Install package
+    command: install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+  - command: sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
+
+  - name: Install edge
+    apt:
+      name: microsoft-edge-stable
+    update_cache: yes
+
+  - name: Install teams
+    snap:
+      name: teams-for-linux
+  become: yes
