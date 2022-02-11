@@ -3,10 +3,10 @@
   vars:
     install_omz: no
     install_spacemacs: no
-    install_docker: yes
-    install_i3: no
-    install_work_tools: yes
-    install_other_tools: yes
+    install_docker: no
+    install_i3: yes
+    install_work_tools: no
+    install_other_tools: no
 
   tasks:
     - name: Install omz
@@ -33,3 +33,8 @@
       import_role:
         name: work_tools
       when: install_work_tools
+
+    - name: Install i3
+      import_role:
+        name: i3
+      when: install_i3
