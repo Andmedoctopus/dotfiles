@@ -15,8 +15,8 @@
 
 - name: Copy config
   copy:
-    dest: "~"
-    src: .zshrc
+    src: "{{ config_name }}"
+    dest: "~/{{ config_name }}"
 
 - name: Replace username in config
   command:

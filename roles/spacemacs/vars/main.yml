@@ -1,2 +1,3 @@
 ---
 # vars file for spacemacs
+config_name: ".spacemacs"

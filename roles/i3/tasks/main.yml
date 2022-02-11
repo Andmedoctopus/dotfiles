@@ -25,10 +25,10 @@
 
 - name: Copy config
   copy:
-    src: config
-    dest: "{{ config_folder }}" 
+    src: "{{ config_file_name }}"
+    dest: "{{ config_folder }}/{{ config_file_name }}"
 
 - name: Copy wallpaper
   copy:
-    src: wallpaper.jpg
+    src: "{{ wallpaper_file_name }}"
     dest: "{{ config_folder }}"

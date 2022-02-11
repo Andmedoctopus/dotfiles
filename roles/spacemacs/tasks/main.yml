@@ -20,6 +20,6 @@
 
 - name: Copy config
   copy:
-    dest: "~"
-    src: ".spacemacs"
+    src: "{{ config_name }}"
+    dest: "~/{{ config_name }}"
      
