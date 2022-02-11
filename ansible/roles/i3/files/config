@@ -39,7 +39,16 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 #lock screen
 bindsym $mod+shift+p exec i3lock
 
-exec_always feh --bg-scale /home/andreymedvedev/Pictures/pexels-aviv-perets-3274903.jpg
+# screensaver
+exec --no-startup-id xset dpms 900
+exec --no-startup-id xautolock -time 11 -locker i3lock
+
+
+#screenshot
+bindsym mod1+Control+a exec flameshot gui -p ~/Pictures/screenshots
+
+#background picture
+exec_always feh --bg-scale ~/.config/i3/wallpaper.jpg
 #layout
 exec setxkbmap -layout us,ru
 exec setxkbmap -option 'grp:alt_shift_toggle'
@@ -150,7 +159,7 @@ bindsym $mod+minus scratchpad show
 set $ws1 "1: Firefox"
 set $ws2 "2: File Manager"
 set $ws3 "3: Editor"
-set $ws4 "4"
+set $ws4 "4: Edge"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
@@ -186,15 +195,20 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 assign [class="Firefox"] $ws1
 assign [class="Doublecmd"] $ws2
 assign [class="Emacs"] $ws3
+assign [class="Microsoft-edge"] $ws4
+assign [class="Org.gnome.DejaDup"] $ws8
 assign [class="Microsoft Teams - Preview"] $ws9
 assign [class="TelegramDesktop"] $ws10
 
-#exec when start applications
-exec teams
-exec firefox
-exec emacs
-exec doublecmd
-exec telegram-desktop
+#exec startup applications
+exec --no-startup-id teams
+exec --no-startup-id firefox
+exec --no-startup-id emacs
+exec --no-startup-id doublecmd
+exec --no-startup-id telegram-desktop
+exec --no-startup-id microsoft-edge-stable
+exec --no-startup-id cbatticon
+
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
