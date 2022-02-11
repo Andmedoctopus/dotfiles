@@ -198,10 +198,12 @@ assign [class="Emacs"] $ws3
 assign [class="Microsoft-edge"] $ws4
 assign [class="Org.gnome.DejaDup"] $ws8
 assign [class="Microsoft Teams - Preview"] $ws9
+assign [class="teams-for-linux"] $ws9
 assign [class="TelegramDesktop"] $ws10
 
 #exec startup applications
 exec --no-startup-id teams
+exec --no-startup-id teams-for-linux
 exec --no-startup-id firefox
 exec --no-startup-id emacs
 exec --no-startup-id doublecmd

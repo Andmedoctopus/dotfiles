@@ -1,2 +1,0 @@
-[testserver]
-ubuntu ansible_host=localhost ansible_port=5522 ansible_user=test ansible_ssh_pass=test
