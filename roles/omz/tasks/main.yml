@@ -16,7 +16,7 @@
 - name: Copy config
   copy:
     src: "{{ config_name }}"
-    dest: "~/{{ config_name }}"
+    dest: "~"
 
 - name: Replace username in config
   command:
