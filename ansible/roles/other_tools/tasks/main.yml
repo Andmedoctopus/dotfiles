@@ -12,6 +12,7 @@
     with_items:
       - bitwarden
       - flameshot
+      - telegram-desktop
     snap:
       name: "{{ item }}"
   become: yes
