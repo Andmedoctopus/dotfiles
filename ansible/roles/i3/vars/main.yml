@@ -1,2 +1,3 @@
 ---
 # vars file for i3
+config_folder: "~/.config/i3"
