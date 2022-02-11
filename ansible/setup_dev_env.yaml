@@ -5,6 +5,8 @@
     install_spacemacs: no
     install_docker: yes
     install_i3: no
+    install_work_tools: no
+    install_other_tools: yes
 
   tasks:
     - name: Install omz
@@ -21,3 +23,9 @@
       import_role:
         name: docker
       when: install_docker
+
+    - name: Install other tools
+      import_role:
+        name: other_tools
+      when: install_other_tools
+

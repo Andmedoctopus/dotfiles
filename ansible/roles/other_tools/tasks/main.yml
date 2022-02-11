@@ -1,0 +1,17 @@
+---
+# tasks file for other_tools
+- block:
+  - name: Install tools via apt
+    with_items:
+      - vim
+      - doublecmd-common
+    apt:
+      name: "{{ item }}"
+
+  - name: Install tools via snap
+    with_items:
+      - bitwarden
+      - flameshot
+    snap:
+      name: "{{ item }}"
+  become: yes
