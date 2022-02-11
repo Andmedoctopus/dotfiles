@@ -10,6 +10,7 @@
       - apt-transport-https
       - xautolock
       - cbatticon
+      - feh
     apt:
       name: "{{ item }}"
 
