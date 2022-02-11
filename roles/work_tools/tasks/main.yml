@@ -19,3 +19,8 @@
     snap:
       name: teams-for-linux
   become: yes
+
+- name: Remove GPG file
+  file:
+    path: ./microsoft.gpg
+    state: absent
