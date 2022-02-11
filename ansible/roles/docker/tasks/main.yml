@@ -1,9 +1,9 @@
 ---
 # tasks file for docker
 
-block:
+- block:
   - name: Install dependency tools
-    with items:
+    with_items:
       - ca-certificates
       - curl
       - gnupg
