@@ -2,7 +2,7 @@
 # tasks file for work_tools
 
 - name: Add GPG key
-  command: curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+  shell: curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 
 - block:
   - name: Install package
