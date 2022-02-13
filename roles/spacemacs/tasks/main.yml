@@ -1,9 +1,17 @@
 ---
 # tasks file for spacemacs
 - block:
+  - name: Add npm key
+    command: curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
+
+  - name: Add nodejs PPA
+    command: bash nodesource_setup.sh
+
   - name: Install silversearcher for helm-ag
     with_items:
       - silversearcher-ag
+      - nodejs
+      - python3-pip
     apt:
       name: "{{ item }}"
   - name: Install emacs
@@ -23,3 +31,15 @@
     src: "{{ config_name }}"
     dest: "~"
      
+
+- name: Install python lsp
+  command: npm install -g pyright
+
+- name: Install code checkers
+  with_items:
+    - flake8
+    - mypy
+    - ipython
+  pip:
+    name: "{{ item }}"
+
