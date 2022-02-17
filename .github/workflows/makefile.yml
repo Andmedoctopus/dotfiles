@@ -12,5 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Install ansible
+      run: make install-ansible
+
     - name: Run check
       run: make check-syntax
