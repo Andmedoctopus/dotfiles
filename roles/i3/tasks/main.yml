@@ -11,6 +11,7 @@
       - xautolock
       - cbatticon
       - feh
+      - i3blocks
     apt:
       name: "{{ item }}"
 
@@ -33,3 +34,20 @@
   copy:
     src: "{{ wallpaper_file_name }}"
     dest: "{{ config_folder }}"
+
+- name: Copy i3blocks config
+  copy:
+    src: "{{ i3block_config_file_name }}"
+    dest: "{{ config_folder }}"
+
+- name: Install font
+  command: "wget https://github.com/FortAwesome/Font-Awesome/releases/download/6.0.0/fontawesome-free-6.0.0-desktop.zip -O {{ font_zip_fullpath }}"
+
+- name: Unzip font
+  command: "unzip {{ font_zip_fullpath }} -d {{ font_extract_folder }}"
+
+- name: Create fonts folder
+  command: "mkdir ~/.fonts"
+
+- name: Copy font to system
+  shell: 'mv $(find {{ font_extract_folder }} -name "otfs" -type d)/* ~/.fonts/'

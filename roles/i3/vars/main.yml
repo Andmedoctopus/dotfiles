@@ -1,5 +1,12 @@
 ---
 # vars file for i3
 config_folder: "~/.config/i3/"
+
 config_file_name: config
+i3block_config_file_name: i3blocks.conf
+
 wallpaper_file_name: wallpaper.jpg
+
+font_zip_fullpath: /tmp/awesome-font.zip
+font_extract_folder: /tmp/font_extracted
+
