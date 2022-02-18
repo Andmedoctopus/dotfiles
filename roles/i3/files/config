@@ -47,7 +47,7 @@ exec --no-startup-id xautolock -time 11 -locker i3lock
 exec cbatticon
 
 #screenshot
-bindsym mod1+Control+a exec flameshot gui -p ~/Pictures/screenshots
+bindsym mod1+Control+a exec flameshot gui -c -p ~/Pictures/screenshots
 
 #background picture
 exec_always feh --bg-scale ~/.config/i3/wallpaper.jpg
