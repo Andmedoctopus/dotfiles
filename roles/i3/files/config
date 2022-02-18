@@ -43,6 +43,8 @@ bindsym $mod+shift+p exec i3lock
 exec --no-startup-id xset dpms 900
 exec --no-startup-id xautolock -time 11 -locker i3lock
 
+#battery noticifation
+exec cbatticon
 
 #screenshot
 bindsym mod1+Control+a exec flameshot gui -p ~/Pictures/screenshots
