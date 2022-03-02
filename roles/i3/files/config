@@ -200,6 +200,7 @@ assign [class="Doublecmd"] $ws2
 assign [class="Emacs"] $ws3
 assign [class="Microsoft-edge"] $ws4
 assign [class="Org.gnome.DejaDup"] $ws8 # gnome backup
+assign [class="Slack"] $ws8
 assign [class="Microsoft Teams - Preview"] $ws9
 assign [class="TelegramDesktop"] $ws10
 
@@ -212,6 +213,7 @@ exec --no-startup-id telegram-desktop
 exec --no-startup-id microsoft-edge-stable
 exec --no-startup-id flameshot
 exec --no-startup-id deja-dup
+exec --no-startup-id slack
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
