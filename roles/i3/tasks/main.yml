@@ -12,6 +12,7 @@
       - cbatticon
       - feh
       - i3blocks
+      - lm-sensors
     apt:
       name: "{{ item }}"
 
