@@ -6,6 +6,8 @@
       - vim
       - doublecmd-common
       - curl
+      - redshift
+      - redshift-gtk
     apt:
       name: "{{ item }}"
 

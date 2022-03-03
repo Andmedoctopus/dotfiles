@@ -214,6 +214,8 @@ exec --no-startup-id microsoft-edge-stable
 exec --no-startup-id flameshot
 exec --no-startup-id deja-dup
 exec --no-startup-id slack
+# the color temperature of screen
+exec --no-startup-id redshift -l 53.9:27.55 -t 6500:3500 -b 1.0:0.6
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
