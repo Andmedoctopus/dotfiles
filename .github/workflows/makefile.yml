@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - run: echo ${ls}
+    - run: cat Makefile
 
     - name: Install ansible
       run: make install-ansible
