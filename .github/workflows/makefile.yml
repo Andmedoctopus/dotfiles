@@ -17,10 +17,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - run: echo $HOME
-
-    - run: cat Makefile
-
     - name: Install ansible
       run: make install-ansible
 
