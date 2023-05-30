@@ -32,5 +32,7 @@
         src: "doom"
         dest: "{{doom_config_folder }}"
 
+    - name: Generate doom envs
+      command: "{{  doom_cmd  }} env"
     - name: Install doom emacs
-      command: "{{  doom_cmd  }} install --no-config --install --fonts --env --hooks"
+      command: "{{  doom_cmd  }} install --no-config --install --fonts --hooks"
