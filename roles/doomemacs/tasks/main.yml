@@ -37,4 +37,6 @@
 
     - name: Install doom emacs
       command: "{{  doom_cmd  }} install --no-config --install --fonts --hooks"
-      debugger: on_failed
+      register: doom
+    - debug:
+        var: doom.stderr_lines
