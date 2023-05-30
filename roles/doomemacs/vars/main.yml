@@ -1,2 +1,5 @@
 ---
 # vars file for doomemacs
+emacs_folder: "~/.emacs.d"
+doom_cmd: "{{emacs_folder}}//bin/doom"
+doom_config_folder: "~/.config"

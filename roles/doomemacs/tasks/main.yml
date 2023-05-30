@@ -6,3 +6,33 @@
         name: emacs
         state: present
       when: ansible_distribution == 'MacOSX'
+
+    - name: Install npm
+      community.general.homebrew:
+        name: node
+        state: present
+      when: ansible_distribution == 'MacOSX'
+
+    - name: Install lsps
+      with_items:
+        - pyright
+        - dockerfile-language-server-nodejs
+      community.general.npm:
+        name: "{{ item }}"
+        global: true
+
+    - name: Fetch doom emacs
+      git:
+        repo: https://github.com/doomemacs/doomemacs
+        dest: "{{ emacs_folder }}"
+        depth: 1
+
+    - name: Copy configs
+      copy:
+        src: "doom"
+        dest: {{doom_config_folder }}
+
+    - name: Install doom emacs
+      command: "{{  doom_cmd  }} --no-config --install --fonts --env --hooks install"
+
+
