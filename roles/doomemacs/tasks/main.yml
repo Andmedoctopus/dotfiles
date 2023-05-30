@@ -33,6 +33,4 @@
         dest: "{{doom_config_folder }}"
 
     - name: Install doom emacs
-      command: "{{  doom_cmd  }} --no-config --install --fonts --env --hooks install"
-
-
+      command: "{{  doom_cmd  }} install --no-config --install --fonts --env --hooks"
