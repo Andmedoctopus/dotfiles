@@ -30,7 +30,7 @@
     - name: Copy configs
       copy:
         src: "doom"
-        dest: {{doom_config_folder }}
+        dest: "{{doom_config_folder }}"
 
     - name: Install doom emacs
       command: "{{  doom_cmd  }} --no-config --install --fonts --env --hooks install"
