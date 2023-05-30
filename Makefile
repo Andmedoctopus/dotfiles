@@ -10,3 +10,8 @@ check-syntax:
 install-ansible:
 	sudo add-apt-repository --yes --update ppa:ansible/ansible
 	sudo apt-get install -y ansible git make
+
+
+.PHONY: install-packages
+install-packages:
+	ansible-galaxy collection install community.general
