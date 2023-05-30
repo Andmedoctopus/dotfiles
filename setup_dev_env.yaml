@@ -1,12 +1,13 @@
 ---
 - hosts: localhost
   vars:
-    install_omz: yes
-    install_spacemacs: yes
-    install_docker: yes
-    install_i3: yes
-    install_work_tools: yes
-    install_other_tools: yes
+    install_omz: no
+    install_spacemacs: no
+    install_docker: no
+    install_i3: no
+    install_work_tools: no
+    install_other_tools: no
+    install_doomemacs: yes
 
   tasks:
     - name: Install omz
@@ -38,3 +39,8 @@
       import_role:
         name: i3
       when: install_i3
+
+    - name: Install doomemacs
+      import_role:
+        name: doomemacs
+      when: install_doomemacs

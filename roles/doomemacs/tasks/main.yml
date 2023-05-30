@@ -1,0 +1,8 @@
+---
+# tasks file for doomemacs
+- block:
+    - name: Install emacs
+      community.general.homebrew:
+        name: emacs
+        state: present
+      when: ansible_distribution == 'MacOSX'
