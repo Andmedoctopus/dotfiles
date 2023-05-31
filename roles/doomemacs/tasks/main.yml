@@ -33,4 +33,4 @@
         dest: "{{doom_config_folder }}"
 
     - name: Install doom emacs
-      command: "yes yes| {{  doom_cmd  }} install --no-config --install  --hooks"
+      command: "yes y| {{  doom_cmd  }} install --no-config --install  --hooks"
